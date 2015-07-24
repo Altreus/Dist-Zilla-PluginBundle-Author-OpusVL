@@ -54,7 +54,8 @@ sub configure {
         BumpVersionAfterRelease
     ),
         ['Git::Commit' => 
-            CommitVersionBump => { allow_dirty_match => '^lib/', commit_msg => "Bumped version number" } ]
+            CommitVersionBump => { allow_dirty_match => '^lib/', commit_msg => "Bumped version number" } ],
+        'CPAN::Mini::Inject::REST'
     );
 
     $self->add_plugins(
