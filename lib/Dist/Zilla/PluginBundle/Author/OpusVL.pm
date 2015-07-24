@@ -30,7 +30,7 @@ sub configure {
         MetaJSON
         PodSyntaxTests
         Test::Compile
-        ReportVersions::Tiny
+        Test::ReportPrereqs
         CPANFile
     ));
 

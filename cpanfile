@@ -10,7 +10,7 @@ requires 'Dist::Zilla::Plugin::MetaConfig';
 requires 'Dist::Zilla::Plugin::MetaJSON';
 requires 'Dist::Zilla::Plugin::PodSyntaxTests';
 requires 'Dist::Zilla::Plugin::Test::Compile';
-requires 'Dist::Zilla::Plugin::ReportVersions::Tiny';
+requires 'Dist::Zilla::Plugin::Test::ReportPrereqs';
 requires 'Dist::Zilla::Plugin::CheckChangesHasContent';
 requires 'Dist::Zilla::Plugin::RewriteVersion';
 requires 'Dist::Zilla::Plugin::NextRelease';
