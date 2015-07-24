@@ -48,6 +48,7 @@ sub configure {
     ),
         ['Git::Commit' => 
             CommitVersionBump => { allow_dirty_match => '^lib/', commit_msg => "Bumped version number" } ],
+        'Git::Push',
         ['CPAN::Mini::Inject::REST' => 
             $self->config_slice({
                 mcpani_host => 'host',
