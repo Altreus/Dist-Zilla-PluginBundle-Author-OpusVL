@@ -1,52 +1,23 @@
 use strict;
 use warnings;
-package Dist::Zilla::PluginBundle::OpusVL;
-
-#VERSION
+package Dist::Zilla::PluginBundle::Author::OpusVL;
 
 use Moose;
-use Moose::Autobox;
-use Dist::Zilla 2.100922; # TestRelease
 with 'Dist::Zilla::Role::PluginBundle::Easy';
-with 'Dist::Zilla::Role::PluginBundle::Config::Slicer';
+
+our $VERSION = 0.001;
  
 use Dist::Zilla::PluginBundle::Basic;
 use Dist::Zilla::PluginBundle::Filter;
 use Dist::Zilla::PluginBundle::Git;
  
-has manual_version => (
-    is          => 'ro',
-    isa         => 'Bool',
-    lazy        => 1,
-    default => sub { $_[0]->payload->{manual_version} },
-);
- 
-has major_version => (
-    is          => 'ro',
-    isa         => 'Int',
-    lazy        => 1,
-    default => sub { $_[0]->payload->{version} || 0 },
-);
- 
-has is_task => (
-    is          => 'ro',
-    isa         => 'Bool',
-    lazy        => 1,
-    default => sub { $_[0]->payload->{task} },
-);
- 
-has github_issues => (
-    is          => 'ro',
-    isa         => 'Bool',
-    lazy        => 1,
-    default => sub { $_[0]->payload->{github_issues} },
-);
- 
 sub configure {
     my ($self) = @_;
  
-    $self->add_plugins('Git::GatherDir');
-    $self->add_plugins('CheckPrereqsIndexed');
+    $self->add_plugins(qw(
+        Git::GatherDir
+        Prereqs::FromCPANfile
+    ));
     $self->add_bundle('@Filter', {
         '-bundle' => '@Basic',
         '-remove' => [ 'GatherDir', 'UploadToCPAN' ],
@@ -54,12 +25,9 @@ sub configure {
 
     $self->add_plugins(qw(
         AutoPrereqs
-        Git::NextVersion
         ReadmeFromPod
-        PkgVersion
         MetaConfig
         MetaJSON
-        NextRelease
         PodSyntaxTests
         Test::Compile
         ReportVersions::Tiny
@@ -71,7 +39,24 @@ sub configure {
             copy => 'cpanfile'
         } ],
     );
- 
+
+    $self->add_plugins(qw(
+        CheckChangesHasContent
+        RewriteVersion
+        NextRelease
+    ),
+        [ 'Git::Commit' =>
+            CommitGeneratedFiles => { 
+                allow_dirty => [ qw/dist.ini Changes cpanfile LICENSE/ ]
+        } ],
+    qw(
+        Git::Tag
+        BumpVersionAfterRelease
+    ),
+        ['Git::Commit' => 
+            CommitVersionBump => { allow_dirty_match => '^lib/', commit_msg => "Bumped version number" } ]
+    );
+
     $self->add_plugins(
         [ Prereqs => 'TestMoreWithSubtests' => {
             -phase => 'test',
@@ -79,8 +64,6 @@ sub configure {
             'Test::More' => '0.96'
         } ],
     );
- 
-    $self->add_bundle('@Git');
 }
  
 __PACKAGE__->meta->make_immutable;
