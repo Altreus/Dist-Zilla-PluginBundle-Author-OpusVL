@@ -13,6 +13,9 @@ use Dist::Zilla::PluginBundle::Git;
  
 sub configure {
     my ($self) = @_;
+
+    die "CPAN::Mini::Inject::REST hostname must be set in mcpani_host"
+        if not $self->payload->{mcpani_host};
  
     $self->add_plugins(qw(
         Git::GatherDir
@@ -31,16 +34,6 @@ sub configure {
         PodSyntaxTests
         Test::Compile
         Test::ReportPrereqs
-        CPANFile
-    ));
-
-    $self->add_plugins(
-        [ CopyFilesFromBuild => {
-            copy => 'cpanfile'
-        } ],
-    );
-
-    $self->add_plugins(qw(
         CheckChangesHasContent
         RewriteVersion
         NextRelease
@@ -55,7 +48,12 @@ sub configure {
     ),
         ['Git::Commit' => 
             CommitVersionBump => { allow_dirty_match => '^lib/', commit_msg => "Bumped version number" } ],
-        'CPAN::Mini::Inject::REST'
+        ['CPAN::Mini::Inject::REST' => 
+            $self->config_slice({
+                mcpani_host => 'host',
+                mcpani_port => 'port',
+                mcpani_protocol => 'protocol',
+            }) ]
     );
 
     $self->add_plugins(
