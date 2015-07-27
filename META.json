@@ -1,0 +1,69 @@
+{
+   "abstract" : "Standard behaviour for OpusVL modules",
+   "author" : [
+      "Alastair McGowan-Douglas <altreus@altre.us>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 5.036, CPAN::Meta::Converter version 2.150001",
+   "license" : [
+      "bsd"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : 2
+   },
+   "name" : "Dist-Zilla-PluginBundle-Author-OpusVL",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Dist::Zilla::PluginBundle::Author::ALTREUS" : "0.001"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla::Plugin::AutoPrereqs" : "0",
+            "Dist::Zilla::Plugin::BumpVersionAfterRelease" : "0",
+            "Dist::Zilla::Plugin::CPAN::Mini::Inject::REST" : "0",
+            "Dist::Zilla::Plugin::CheckChangesHasContent" : "0",
+            "Dist::Zilla::Plugin::MetaConfig" : "0",
+            "Dist::Zilla::Plugin::MetaJSON" : "0",
+            "Dist::Zilla::Plugin::NextRelease" : "0",
+            "Dist::Zilla::Plugin::PodSyntaxTests" : "0",
+            "Dist::Zilla::Plugin::Prereqs::FromCPANfile" : "0",
+            "Dist::Zilla::Plugin::ReadmeFromPod" : "0",
+            "Dist::Zilla::Plugin::RewriteVersion" : "0",
+            "Dist::Zilla::Plugin::Test::Compile" : "0",
+            "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
+            "Dist::Zilla::PluginBundle::Basic" : "0",
+            "Dist::Zilla::PluginBundle::Filter" : "0",
+            "Dist::Zilla::PluginBundle::Git" : "0",
+            "Dist::Zilla::Role::PluginBundle::Easy" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "Dist::Zilla::PluginBundle::Author::OpusVL" : {
+         "file" : "lib/Dist/Zilla/PluginBundle/Author/OpusVL.pm",
+         "version" : "0.002"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/Altreus/Dist-Zilla-PluginBundle-Author-OpusVL/issues"
+      },
+      "homepage" : "https://github.com/Altreus/Dist-Zilla-PluginBundle-Author-OpusVL",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/Altreus/Dist-Zilla-PluginBundle-Author-OpusVL.git",
+         "web" : "https://github.com/Altreus/Dist-Zilla-PluginBundle-Author-OpusVL"
+      }
+   },
+   "version" : "0.002"
+}
+
