@@ -1,5 +1,10 @@
 {{$NEXT}}
 
+0.003     2015-08-28 11:34:40 BST
+
+  - Added Repository plugin
+  - Fixed POD
+
 0.002     2015-07-27 16:19:09 BST
   
   - Push git stuff after release
