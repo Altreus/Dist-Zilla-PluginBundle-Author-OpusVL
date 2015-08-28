@@ -37,6 +37,7 @@ sub configure {
         CheckChangesHasContent
         RewriteVersion
         NextRelease
+        Repository
     ),
         [ 'Git::Commit' =>
             CommitGeneratedFiles => { 
@@ -54,10 +55,7 @@ sub configure {
                 mcpani_host => 'host',
                 mcpani_port => 'port',
                 mcpani_protocol => 'protocol',
-            }) ]
-    );
-
-    $self->add_plugins(
+            }) ],
         [ Prereqs => 'TestMoreWithSubtests' => {
             -phase => 'test',
             -type  => 'requires',
