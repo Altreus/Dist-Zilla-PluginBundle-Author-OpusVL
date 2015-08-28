@@ -38,6 +38,7 @@ sub configure {
         RewriteVersion
         NextRelease
         Repository
+        PodWeaver
     ),
         [ 'Git::Commit' =>
             CommitGeneratedFiles => { 
@@ -104,6 +105,7 @@ It is roughly equivalent to:
   [RewriteVersion]
   [NextRelease]
   [Repository]
+  [PodWeaver]
   
   [Git::Commit / CommitGeneratedFiles]
   allow_dirty = dist.ini
