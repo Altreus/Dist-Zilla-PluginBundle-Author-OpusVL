@@ -1,5 +1,10 @@
 {{$NEXT}}
 
+0.004     2015-08-28 12:13:44 BST
+
+  - Added PodWeaver plugin
+  - Wove POD
+
 0.003     2015-08-28 11:34:40 BST
 
   - Added Repository plugin
