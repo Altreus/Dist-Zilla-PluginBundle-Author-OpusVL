@@ -79,7 +79,8 @@ Dist::Zilla::PluginBundle::OpusVL - Standard behaviour for OpusVL modules
 
 In your F<dist.ini>:
 
-    [@OpusVL]
+    [@Author::OpusVL]
+    mcpani_host = some.cpan.host
 
 =head1 DESCRIPTION
 
@@ -91,23 +92,35 @@ It is roughly equivalent to:
   [@Basic]
   ; ...but without GatherDir and UploadToCPAN
 
+  [Prereqs::FromCPANfile]
   [AutoPrereqs]
-  [Git::NextVersion]
-  [PkgVersion]
+  [ReadmeFromPod]
   [MetaConfig]
   [MetaJSON]
-  [NextRelease]
-
-  ; ensure non-dzil users can cpanm from source
-  [CPANFile]
-  [CopyFilesFromBuild]
-  copy = cpanfile
-
-  [Test::ChangesHasContent]
   [PodSyntaxTests]
   [Test::Compile]
-  [ReportVersions::Tiny]
+  [Test::ReportPrereqs]
+  [CheckChangesHasContent]
+  [RewriteVersion]
+  [NextRelease]
+  [Repository]
+  
+  [Git::Commit / CommitGeneratedFiles]
+  allow_dirty = dist.ini
+  allow_dirty = Changes 
+  allow_dirty = cpanfile 
+  allow_dirty = LICENSE
 
-  [@Git]
+  [Git::Tag]
+  [BumpVersionAfterRelease]
+  [Git::Commit / CommitVersionBump]
+  allow_dirty_match = ^lib/
+  commit_msg = "Bumped version number"
+
+  [Git::Push]
+  [CPAN::Mini::Inject::REST]
+
   [Prereqs / TestMoreWithSubtests]
+  -phase = test
+  -type  = requires
   Test::More = 0.96
