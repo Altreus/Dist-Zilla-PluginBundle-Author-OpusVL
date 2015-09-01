@@ -16,4 +16,5 @@ requires 'Dist::Zilla::Plugin::RewriteVersion';
 requires 'Dist::Zilla::Plugin::NextRelease';
 requires 'Dist::Zilla::Plugin::BumpVersionAfterRelease';
 requires 'Dist::Zilla::Plugin::CPAN::Mini::Inject::REST';
+requires 'Dist::Zilla::Plugin::PodWeaver';
 
