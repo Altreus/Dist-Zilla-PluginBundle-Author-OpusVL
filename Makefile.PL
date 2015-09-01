@@ -25,6 +25,7 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::MetaJSON" => 0,
     "Dist::Zilla::Plugin::NextRelease" => 0,
     "Dist::Zilla::Plugin::PodSyntaxTests" => 0,
+    "Dist::Zilla::Plugin::PodWeaver" => 0,
     "Dist::Zilla::Plugin::Prereqs::FromCPANfile" => 0,
     "Dist::Zilla::Plugin::ReadmeFromPod" => 0,
     "Dist::Zilla::Plugin::RewriteVersion" => 0,
@@ -35,7 +36,7 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::PluginBundle::Git" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0
   },
-  "VERSION" => "0.004",
+  "VERSION" => "0.005",
   "test" => {
     "TESTS" => ""
   }
@@ -51,6 +52,7 @@ my %FallbackPrereqs = (
   "Dist::Zilla::Plugin::MetaJSON" => 0,
   "Dist::Zilla::Plugin::NextRelease" => 0,
   "Dist::Zilla::Plugin::PodSyntaxTests" => 0,
+  "Dist::Zilla::Plugin::PodWeaver" => 0,
   "Dist::Zilla::Plugin::Prereqs::FromCPANfile" => 0,
   "Dist::Zilla::Plugin::ReadmeFromPod" => 0,
   "Dist::Zilla::Plugin::RewriteVersion" => 0,
