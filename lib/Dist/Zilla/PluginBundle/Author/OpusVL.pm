@@ -5,7 +5,7 @@ package Dist::Zilla::PluginBundle::Author::OpusVL;
 use Moose;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
  
 use Dist::Zilla::PluginBundle::Basic;
 use Dist::Zilla::PluginBundle::Filter;
