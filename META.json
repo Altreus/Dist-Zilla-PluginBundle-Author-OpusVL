@@ -4,7 +4,7 @@
       "Alastair McGowan-Douglas <altreus@altre.us>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.036, CPAN::Meta::Converter version 2.150001",
+   "generated_by" : "Dist::Zilla version 5.039, CPAN::Meta::Converter version 2.150001",
    "license" : [
       "bsd"
    ],
@@ -13,6 +13,16 @@
       "version" : 2
    },
    "name" : "Dist-Zilla-PluginBundle-Author-OpusVL",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples"
+      ]
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {
@@ -21,7 +31,7 @@
       },
       "develop" : {
          "requires" : {
-            "Dist::Zilla::PluginBundle::Author::ALTREUS" : "0.001"
+            "Dist::Zilla::PluginBundle::Author::ALTREUS" : "0.002"
          }
       },
       "runtime" : {
@@ -37,6 +47,7 @@
             "Dist::Zilla::Plugin::PodWeaver" : "0",
             "Dist::Zilla::Plugin::Prereqs::FromCPANfile" : "0",
             "Dist::Zilla::Plugin::ReadmeFromPod" : "0",
+            "Dist::Zilla::Plugin::Repository" : "0",
             "Dist::Zilla::Plugin::RewriteVersion" : "0",
             "Dist::Zilla::Plugin::Test::Compile" : "0",
             "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
@@ -50,7 +61,7 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Author::OpusVL" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Author/OpusVL.pm",
-         "version" : "0.005"
+         "version" : "0.006"
       }
    },
    "release_status" : "stable",
@@ -65,6 +76,10 @@
          "web" : "https://github.com/Altreus/Dist-Zilla-PluginBundle-Author-OpusVL"
       }
    },
-   "version" : "0.005"
+   "version" : "0.006",
+   "x_contributors" : [
+      "Alastair McGowan-Douglas <alastair.mcgowan@opusvl.com>",
+      "Colin Newell <colin.newell@gmail.com>"
+   ]
 }
 

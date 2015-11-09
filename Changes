@@ -1,5 +1,9 @@
 {{$NEXT}}
 
+0.006     2015-11-09 12:11:43 GMT
+
+  - Added missing dependency on Dist::Zilla::Plugin::Repository
+
 0.005     2015-09-01 12:00:54 BST
 
   - Added PodWeaver as a dependency (oops)
