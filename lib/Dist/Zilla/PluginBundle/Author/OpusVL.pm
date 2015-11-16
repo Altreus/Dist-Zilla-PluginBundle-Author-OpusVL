@@ -44,6 +44,10 @@ sub configure {
             CommitGeneratedFiles => { 
                 allow_dirty => [ qw/dist.ini Changes cpanfile LICENSE/ ]
         } ],
+        'ExecDir',
+        [ ExecDir =>
+            ScriptDir => { dir => 'script' }
+        ],
     qw(
         Git::Tag
         BumpVersionAfterRelease
