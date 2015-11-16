@@ -1,5 +1,9 @@
 {{$NEXT}}
 
+0.007     2015-11-16 14:47:23 GMT
+
+  - Install executables from script/ and bin/
+
 0.006     2015-11-09 12:11:43 GMT
 
   - Added missing dependency on Dist::Zilla::Plugin::Repository

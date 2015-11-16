@@ -4,7 +4,7 @@
       "Alastair McGowan-Douglas <altreus@altre.us>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.039, CPAN::Meta::Converter version 2.150001",
+   "generated_by" : "Dist::Zilla version 5.042, CPAN::Meta::Converter version 2.150001",
    "license" : [
       "bsd"
    ],
@@ -15,12 +15,12 @@
    "name" : "Dist-Zilla-PluginBundle-Author-OpusVL",
    "no_index" : {
       "directory" : [
-         "t",
-         "xt",
+         "eg",
+         "examples",
          "inc",
          "share",
-         "eg",
-         "examples"
+         "t",
+         "xt"
       ]
    },
    "prereqs" : {
@@ -61,7 +61,7 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Author::OpusVL" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Author/OpusVL.pm",
-         "version" : "0.006"
+         "version" : "0.007"
       }
    },
    "release_status" : "stable",
@@ -76,7 +76,7 @@
          "web" : "https://github.com/Altreus/Dist-Zilla-PluginBundle-Author-OpusVL"
       }
    },
-   "version" : "0.006",
+   "version" : "0.007",
    "x_contributors" : [
       "Alastair McGowan-Douglas <alastair.mcgowan@opusvl.com>",
       "Colin Newell <colin.newell@gmail.com>"
