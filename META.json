@@ -61,7 +61,7 @@
    "provides" : {
       "Dist::Zilla::PluginBundle::Author::OpusVL" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Author/OpusVL.pm",
-         "version" : "0.007"
+         "version" : "0.008"
       }
    },
    "release_status" : "stable",
@@ -76,7 +76,7 @@
          "web" : "https://github.com/Altreus/Dist-Zilla-PluginBundle-Author-OpusVL"
       }
    },
-   "version" : "0.007",
+   "version" : "0.008",
    "x_contributors" : [
       "Alastair McGowan-Douglas <alastair.mcgowan@opusvl.com>",
       "Colin Newell <colin.newell@gmail.com>"

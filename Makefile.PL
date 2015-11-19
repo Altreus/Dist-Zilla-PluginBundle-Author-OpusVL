@@ -36,7 +36,7 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::PluginBundle::Git" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0
   },
-  "VERSION" => "0.007",
+  "VERSION" => "0.008",
   "test" => {
     "TESTS" => ""
   }
