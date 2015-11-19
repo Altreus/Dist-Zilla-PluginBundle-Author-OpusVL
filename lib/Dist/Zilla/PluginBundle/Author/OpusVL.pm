@@ -38,8 +38,14 @@ sub configure {
         RewriteVersion
         NextRelease
         Repository
-        PodWeaver
     ),
+        [ Encoding => 
+            CommonBinaryFiles => {
+                match => '\.(png|jpg|db)$',
+                encoding => 'bytes'
+        } ],
+        # Don't try to weave scripts. They have their own POD.
+        [ PodWeaver => { finder => ':InstallModules' } ],
         [ 'Git::Commit' =>
             CommitGeneratedFiles => { 
                 allow_dirty => [ qw/dist.ini Changes cpanfile LICENSE/ ]
