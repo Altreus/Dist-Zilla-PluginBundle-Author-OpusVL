@@ -23,7 +23,7 @@ sub configure {
     ));
     $self->add_bundle('@Filter', {
         '-bundle' => '@Basic',
-        '-remove' => [ 'GatherDir', 'UploadToCPAN' ],
+        '-remove' => [ 'GatherDir', 'UploadToCPAN', 'TestRelease' ],
     });
 
     $self->add_plugins(qw(
