@@ -84,7 +84,7 @@ no Moose;
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::OpusVL - Standard behaviour for OpusVL modules
+Dist::Zilla::PluginBundle::Author::OpusVL - Standard behaviour for OpusVL modules
 
 =head1 SYNOPSIS
 
