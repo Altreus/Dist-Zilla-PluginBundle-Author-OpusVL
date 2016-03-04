@@ -18,3 +18,5 @@ requires 'Dist::Zilla::Plugin::BumpVersionAfterRelease';
 requires 'Dist::Zilla::Plugin::CPAN::Mini::Inject::REST';
 requires 'Dist::Zilla::Plugin::PodWeaver';
 requires 'Dist::Zilla::Plugin::Repository';
+requires 'Dist::Zilla::Plugin::Test::PAUSE::Permissions';
+requires 'Dist::Zilla::Plugin::GitHub::Meta';
