@@ -6,7 +6,7 @@ use Dist::Zilla::PluginBundle::Filter;
 use Dist::Zilla::PluginBundle::Author::OpusVL;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
-our $VERSION = '0.009';
+our $VERSION = '0.010';
 
 sub configure {
     my $self = shift;
