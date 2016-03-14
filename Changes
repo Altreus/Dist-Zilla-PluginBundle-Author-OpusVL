@@ -1,5 +1,9 @@
 {{$NEXT}}
 
+0.009     2016-03-14 12:34:07 GMT
+
+  - Created ToCPAN alternative, for releasing to CPAN proper
+
 0.008     2015-11-19 13:43:47 GMT
 
   - No longer runs tests before release, because we use Jenkins for that

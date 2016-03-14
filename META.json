@@ -4,7 +4,7 @@
       "Alastair McGowan-Douglas <altreus@altre.us>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.043, CPAN::Meta::Converter version 2.150001",
+   "generated_by" : "Dist::Zilla version 5.042, CPAN::Meta::Converter version 2.150001",
    "license" : [
       "bsd"
    ],
@@ -27,6 +27,11 @@
       "configure" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Dist::Zilla::PluginBundle::Author::ALTREUS" : "0.002"
          }
       },
       "runtime" : {
@@ -80,7 +85,8 @@
    "version" : "0.009",
    "x_contributors" : [
       "Alastair McGowan-Douglas <alastair.mcgowan@opusvl.com>",
-      "Colin Newell <colin.newell@gmail.com>"
+      "Colin Newell <colin.newell@gmail.com>",
+      "Colin Newell <colin@opusvl.com>"
    ]
 }
 
