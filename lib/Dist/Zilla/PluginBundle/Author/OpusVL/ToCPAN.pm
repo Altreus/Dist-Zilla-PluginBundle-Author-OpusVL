@@ -1,26 +1,31 @@
 package Dist::Zilla::PluginBundle::Author::OpusVL::ToCPAN;
 
 use Moose;
+use 5.014;
 
 use Dist::Zilla::PluginBundle::Filter;
 use Dist::Zilla::PluginBundle::Author::OpusVL;
-with 'Dist::Zilla::Role::PluginBundle::Easy';
+with (
+    'Dist::Zilla::Role::PluginBundle::Easy',
+    'Dist::Zilla::Role::PluginBundle::PluginRemover',
+    'Dist::Zilla::Role::PluginBundle::Config::Slicer',
+);
 
 our $VERSION = '0.010';
 
 sub configure {
     my $self = shift;
-    $self->add_bundle('@Filter', {
-        '-bundle' => '@Author::OpusVL',
-        '-remove' => [ 'CPAN::Mini::Inject::REST', 'Repository' ],
+    my $remove = $self->payload->{ $self->plugin_remover_attribute } || [];
+
+    $self->add_bundle('@Author::OpusVL', {
+        '-remove' => [ 'CPAN::Mini::Inject::REST', 'Repository', @$remove ],
         mcpani_host => 'fake',
     });
 
     $self->add_plugins(qw(
         UploadToCPAN
         GitHub::Meta
-    ),
-        [ ReadmeFromPod => GithubReadme => { type => 'pod' } ]);
+    ));
 }
 __PACKAGE__->meta->make_immutable;
 no Moose;

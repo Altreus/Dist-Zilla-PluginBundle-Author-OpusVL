@@ -3,7 +3,12 @@ use warnings;
 package Dist::Zilla::PluginBundle::Author::OpusVL;
 
 use Moose;
-with 'Dist::Zilla::Role::PluginBundle::Easy';
+use 5.014;
+with (
+    'Dist::Zilla::Role::PluginBundle::Easy',
+    'Dist::Zilla::Role::PluginBundle::PluginRemover',
+    'Dist::Zilla::Role::PluginBundle::Config::Slicer',
+);
 
 our $VERSION = '0.010';
  
@@ -16,24 +21,19 @@ sub configure {
 
     die "CPAN::Mini::Inject::REST hostname must be set in mcpani_host"
         if not $self->payload->{mcpani_host};
+
+    my $remove = $self->payload->{ $self->plugin_remover_attribute } || [];
  
     $self->add_plugins(qw(
         Git::GatherDir
         Prereqs::FromCPANfile
     ));
-    $self->add_bundle('@Filter', {
-        '-bundle' => '@Basic',
-        '-remove' => [ 'GatherDir', 'UploadToCPAN', 'TestRelease' ],
+    $self->add_bundle('@Starter', {
+        '-remove' => [ 'GatherDir', 'UploadToCPAN', 'TestRelease', @$remove ],
     });
 
     $self->add_plugins(qw(
         AutoPrereqs
-        ReadmeFromPod
-        MetaConfig
-        MetaJSON
-        PodSyntaxTests
-        Test::Compile
-        Test::ReportPrereqs
         CheckChangesHasContent
         RewriteVersion
         NextRelease
