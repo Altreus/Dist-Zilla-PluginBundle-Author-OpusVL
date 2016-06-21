@@ -28,6 +28,10 @@ sub configure {
         Git::GatherDir
         Prereqs::FromCPANfile
     ));
+    $self->add_plugins(
+        # Don't try to weave scripts. They have their own POD.
+        [ PodWeaver => { finder => ':InstallModules' } ],
+    );
     $self->add_bundle('@Starter', {
         '-remove' => [ 'GatherDir', 'UploadToCPAN', 'TestRelease', @$remove ],
     });
@@ -44,8 +48,6 @@ sub configure {
                 match => '\.(png|jpg|db)$',
                 encoding => 'bytes'
         } ],
-        # Don't try to weave scripts. They have their own POD.
-        [ PodWeaver => { finder => ':InstallModules' } ],
         [ 'Git::Commit' =>
             CommitGeneratedFiles => { 
                 allow_dirty => [ qw/dist.ini Changes cpanfile LICENSE/ ]
