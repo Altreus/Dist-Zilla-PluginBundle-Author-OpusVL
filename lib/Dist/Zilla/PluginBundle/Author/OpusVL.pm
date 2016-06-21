@@ -12,10 +12,6 @@ with (
 
 our $VERSION = '0.011';
  
-use Dist::Zilla::PluginBundle::Basic;
-use Dist::Zilla::PluginBundle::Filter;
-use Dist::Zilla::PluginBundle::Git;
- 
 sub configure {
     my ($self) = @_;
 
@@ -138,3 +134,9 @@ It is roughly equivalent to:
   -phase = test
   -type  = requires
   Test::More = 0.96
+
+=head1 TODO
+
+The two modules in this distribution need to be split into roles so we don't
+have to provide dummy data for mcpani_host in the ToCPAN version that doesn't
+use it.
