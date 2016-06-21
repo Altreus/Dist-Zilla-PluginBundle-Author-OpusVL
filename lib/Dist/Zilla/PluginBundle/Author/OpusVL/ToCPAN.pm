@@ -9,7 +9,7 @@ with (
     'Dist::Zilla::Role::PluginBundle::Config::Slicer',
 );
 
-our $VERSION = '0.011';
+our $VERSION = '0.012';
 
 sub configure {
     my $self = shift;
