@@ -16,7 +16,6 @@ my %WriteMakefileArgs = (
   "LICENSE" => "bsd",
   "NAME" => "Dist::Zilla::PluginBundle::Author::OpusVL",
   "PREREQ_PM" => {
-    "Dist::Zilla::Plugin::AutoPrereqs" => 0,
     "Dist::Zilla::Plugin::BumpVersionAfterRelease" => 0,
     "Dist::Zilla::Plugin::CPAN::Mini::Inject::REST" => 0,
     "Dist::Zilla::Plugin::CheckChangesHasContent" => 0,
@@ -27,18 +26,19 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::PodSyntaxTests" => 0,
     "Dist::Zilla::Plugin::PodWeaver" => 0,
     "Dist::Zilla::Plugin::Prereqs::FromCPANfile" => 0,
-    "Dist::Zilla::Plugin::ReadmeFromPod" => 0,
     "Dist::Zilla::Plugin::Repository" => 0,
     "Dist::Zilla::Plugin::RewriteVersion" => 0,
     "Dist::Zilla::Plugin::Test::Compile" => 0,
     "Dist::Zilla::Plugin::Test::PAUSE::Permissions" => 0,
     "Dist::Zilla::Plugin::Test::ReportPrereqs" => 0,
-    "Dist::Zilla::PluginBundle::Basic" => 0,
-    "Dist::Zilla::PluginBundle::Filter" => 0,
+    "Dist::Zilla::Plugin::UploadToCPAN" => 0,
     "Dist::Zilla::PluginBundle::Git" => 0,
-    "Dist::Zilla::Role::PluginBundle::Easy" => 0
+    "Dist::Zilla::PluginBundle::Starter" => 0,
+    "Dist::Zilla::Role::PluginBundle::Config::Slicer" => 0,
+    "Dist::Zilla::Role::PluginBundle::Easy" => 0,
+    "Dist::Zilla::Role::PluginBundle::PluginRemover" => 0
   },
-  "VERSION" => "0.010",
+  "VERSION" => "0.011",
   "test" => {
     "TESTS" => ""
   }
@@ -46,7 +46,6 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Dist::Zilla::Plugin::AutoPrereqs" => 0,
   "Dist::Zilla::Plugin::BumpVersionAfterRelease" => 0,
   "Dist::Zilla::Plugin::CPAN::Mini::Inject::REST" => 0,
   "Dist::Zilla::Plugin::CheckChangesHasContent" => 0,
@@ -57,16 +56,17 @@ my %FallbackPrereqs = (
   "Dist::Zilla::Plugin::PodSyntaxTests" => 0,
   "Dist::Zilla::Plugin::PodWeaver" => 0,
   "Dist::Zilla::Plugin::Prereqs::FromCPANfile" => 0,
-  "Dist::Zilla::Plugin::ReadmeFromPod" => 0,
   "Dist::Zilla::Plugin::Repository" => 0,
   "Dist::Zilla::Plugin::RewriteVersion" => 0,
   "Dist::Zilla::Plugin::Test::Compile" => 0,
   "Dist::Zilla::Plugin::Test::PAUSE::Permissions" => 0,
   "Dist::Zilla::Plugin::Test::ReportPrereqs" => 0,
-  "Dist::Zilla::PluginBundle::Basic" => 0,
-  "Dist::Zilla::PluginBundle::Filter" => 0,
+  "Dist::Zilla::Plugin::UploadToCPAN" => 0,
   "Dist::Zilla::PluginBundle::Git" => 0,
-  "Dist::Zilla::Role::PluginBundle::Easy" => 0
+  "Dist::Zilla::PluginBundle::Starter" => 0,
+  "Dist::Zilla::Role::PluginBundle::Config::Slicer" => 0,
+  "Dist::Zilla::Role::PluginBundle::Easy" => 0,
+  "Dist::Zilla::Role::PluginBundle::PluginRemover" => 0
 );
 
 

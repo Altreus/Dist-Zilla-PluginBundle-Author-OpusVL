@@ -57,4 +57,10 @@ It is roughly equivalent to:
   -type  = requires
   Test::More = 0.96
 
+=head1 TODO
+
+The two modules in this distribution need to be split into roles so we don't
+have to provide dummy data for mcpani_host in the ToCPAN version that doesn't
+use it.
+
 =cut

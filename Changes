@@ -1,5 +1,10 @@
 {{$NEXT}}
 
+0.011     2016-06-21 14:27:15 BST
+
+  - Fix cpanfile
+  - Clean up unused bits
+
 0.010     2016-06-21 14:05:16 BST
 
   - Replaced @Basic with @Starter
