@@ -1,11 +1,11 @@
 requires 'Dist::Zilla::Role::PluginBundle::Easy';
-requires 'Dist::Zilla::PluginBundle::Basic';
-requires 'Dist::Zilla::PluginBundle::Filter';
+requires 'Dist::Zilla::Role::PluginBundle::PluginRemover';
+requires 'Dist::Zilla::Role::PluginBundle::Config::Slicer';
+requires 'Dist::Zilla::PluginBundle::Starter';
 requires 'Dist::Zilla::PluginBundle::Git';
 
 requires 'Dist::Zilla::Plugin::Prereqs::FromCPANfile';
 requires 'Dist::Zilla::Plugin::AutoPrereqs';
-requires 'Dist::Zilla::Plugin::ReadmeFromPod';
 requires 'Dist::Zilla::Plugin::MetaConfig';
 requires 'Dist::Zilla::Plugin::MetaJSON';
 requires 'Dist::Zilla::Plugin::PodSyntaxTests';
