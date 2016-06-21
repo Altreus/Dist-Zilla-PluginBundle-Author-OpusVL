@@ -3,8 +3,6 @@ package Dist::Zilla::PluginBundle::Author::OpusVL::ToCPAN;
 use Moose;
 use 5.014;
 
-use Dist::Zilla::PluginBundle::Filter;
-use Dist::Zilla::PluginBundle::Author::OpusVL;
 with (
     'Dist::Zilla::Role::PluginBundle::Easy',
     'Dist::Zilla::Role::PluginBundle::PluginRemover',

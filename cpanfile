@@ -5,7 +5,6 @@ requires 'Dist::Zilla::PluginBundle::Starter';
 requires 'Dist::Zilla::PluginBundle::Git';
 
 requires 'Dist::Zilla::Plugin::Prereqs::FromCPANfile';
-requires 'Dist::Zilla::Plugin::AutoPrereqs';
 requires 'Dist::Zilla::Plugin::MetaConfig';
 requires 'Dist::Zilla::Plugin::MetaJSON';
 requires 'Dist::Zilla::Plugin::PodSyntaxTests';
@@ -20,3 +19,5 @@ requires 'Dist::Zilla::Plugin::PodWeaver';
 requires 'Dist::Zilla::Plugin::Repository';
 requires 'Dist::Zilla::Plugin::Test::PAUSE::Permissions';
 requires 'Dist::Zilla::Plugin::GitHub::Meta';
+
+requires 'Dist::Zilla::Plugin::UploadToCPAN';
