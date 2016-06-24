@@ -33,7 +33,6 @@ sub configure {
     });
 
     $self->add_plugins(qw(
-        AutoPrereqs
         CheckChangesHasContent
         RewriteVersion
         NextRelease
@@ -98,28 +97,24 @@ This generally implements the workflow that OpusVL modules will use.
 It is roughly equivalent to:
 
   [Git::GatherDir]
-  [@Basic]
-  ; ...but without GatherDir and UploadToCPAN
+  [@Starter]
+  ; ...but without GatherDir and UploadToCPAN or TestRelease
 
   [Prereqs::FromCPANfile]
-  [AutoPrereqs]
-  [ReadmeFromPod]
-  [MetaConfig]
-  [MetaJSON]
-  [PodSyntaxTests]
-  [Test::Compile]
-  [Test::ReportPrereqs]
   [CheckChangesHasContent]
   [RewriteVersion]
   [NextRelease]
   [Repository]
   [PodWeaver]
+  finder = :InstallModules
   
   [Git::Commit / CommitGeneratedFiles]
   allow_dirty = dist.ini
   allow_dirty = Changes 
   allow_dirty = cpanfile 
   allow_dirty = LICENSE
+  [ExecDir]
+  dir = script
 
   [Git::Tag]
   [BumpVersionAfterRelease]
