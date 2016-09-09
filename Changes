@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+0.012     2016-09-09 15:34:23 BST
+
   - Removed AutoPrereqs module.
   - Fixed up documentation to more closely reflect reality.
 
