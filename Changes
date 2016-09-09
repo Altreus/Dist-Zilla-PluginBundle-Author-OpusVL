@@ -1,5 +1,8 @@
 {{$NEXT}}
 
+  - Removed AutoPrereqs module.
+  - Fixed up documentation to more closely reflect reality.
+
 0.011     2016-06-21 14:27:15 BST
 
   - Fix cpanfile
