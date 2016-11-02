@@ -23,10 +23,9 @@ sub configure {
 	$self->add_plugins(
 		'InstallGuide',
 		[CopyFilesFromRelease => { filename => \@from_build }],
+        ['Git::GatherDir' => { exclude_filename => [@from_build] }],
         [ 'Git::Commit' =>
-            CommitGeneratedFiles => { 
-                allow_dirty => [ @from_build, qw/dist.ini Changes cpanfile/ ]
-        } ],
+            { allow_dirty => [ @from_build ] } ],
 	);
 }
 
