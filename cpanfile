@@ -3,6 +3,7 @@ requires 'Dist::Zilla::Role::PluginBundle::PluginRemover';
 requires 'Dist::Zilla::Role::PluginBundle::Config::Slicer';
 requires 'Dist::Zilla::PluginBundle::Starter';
 requires 'Dist::Zilla::PluginBundle::Git';
+requires 'Dist::Zilla::Plugin::CopyFilesFromRelease';
 
 requires 'Dist::Zilla::Plugin::Prereqs::FromCPANfile';
 requires 'Dist::Zilla::Plugin::MetaConfig';
