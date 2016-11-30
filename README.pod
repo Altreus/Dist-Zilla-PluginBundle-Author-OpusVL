@@ -53,6 +53,20 @@ It is roughly equivalent to:
   -type  = requires
   Test::More = 0.96
 
+Your module files should contain:
+
+  # ABSTRACT: frobnicates the whirligigs
+
+  our $VERSION = '0.001';
+
+For PodWeaver (the ABSTRACT) and RewriteVersion (the $VERSION).
+
+Your script files should additionally contain
+
+  # PODNAME: myscript
+
+Modules and scripts should thus not contain a NAME section in their POD.
+
 =head1 TODO
 
 The two modules in this distribution need to be split into roles so we don't
