@@ -23,11 +23,8 @@ sub configure {
     $self->add_plugins(qw(
         Git::GatherDir
         Prereqs::FromCPANfile
+        PodWeaver
     ));
-    $self->add_plugins(
-        # Don't try to weave scripts. They have their own POD.
-        [ PodWeaver => { finder => ':InstallModules' } ],
-    );
     $self->add_bundle('@Starter', {
         '-remove' => [ 'GatherDir', 'UploadToCPAN', 'TestRelease', @$remove ],
     });
