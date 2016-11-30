@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+  - PodWeaver now weaves script POD again
+
 0.012     2016-09-09 15:34:23 BST
 
   - Removed AutoPrereqs module.
