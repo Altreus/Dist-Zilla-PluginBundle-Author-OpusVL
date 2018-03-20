@@ -37,7 +37,7 @@ sub configure {
         ],
     qw(
         Prereqs::FromCPANfile
-        PodWeaver
+        SurgicalPodWeaver
     ));
     $self->add_bundle('@Starter', {
         '-remove' => [ 'GatherDir', 'UploadToCPAN', 'TestRelease', @$remove ],
