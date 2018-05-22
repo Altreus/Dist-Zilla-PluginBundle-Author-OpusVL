@@ -10,7 +10,7 @@ with (
     'Dist::Zilla::Role::PluginBundle::Config::Slicer',
 );
 
-our $VERSION = '0.015';
+our $VERSION = '0.016';
  
 sub configure {
     my ($self) = @_;
